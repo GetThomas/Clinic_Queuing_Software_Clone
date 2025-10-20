@@ -33,11 +33,11 @@ I acknowledge that some of my code snippets were generated with ChatGPT assistan
 
 ## Screenshots
 
-This project’s UI can be seen in the **IMAGES folder** folder. The following are kept for easy reference.
+This project’s UI can be seen in the **IMAGES folder**. The following are kept for easy reference.
 
 **New Patient Registration:**  
-<img src="images/IMG_newpatient.png" alt="New Patient Page" width="400">
+<img src="images/IMG_newpatient.png" alt="New Patient Page" width="300">
 
 **Patient Info:**  
-<img src="images/IMG_info.png" alt="Patient Info" width="400">
+<img src="images/IMG_info.png" alt="Patient Info" width="300">
 
