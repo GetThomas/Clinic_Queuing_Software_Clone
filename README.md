@@ -10,21 +10,6 @@ The project entails the following:
 - allows the receptionist to call patients to the required room through the common_page webpage displayed in the waiting room TV
 - allows you to save the details of patients who have already seen the doctor to history
 
-### Call List
-![Call List](images/IMG_callList.png)
-
-### Patient History
-![Patient History](images/IMG_history.png)
-
-### Patient Info
-![Patient Info](images/IMG_info.png)
-
-### New Patient Registration
-![New Patient Registration](images/IMG_newpatient.png)
-
-### Reception Panel
-![Reception Panel](images/IMG_receptionPanel.png)
-
 
 ## Tech Stack
 
@@ -47,3 +32,26 @@ This project was built using the following technologies:
 **Note:** This project is for portfolio/demo purposes only.  
 You are welcome to view and learn from it, but **do not copy, modify, or redistribute** without permission.
 I acknowledge that some of my code snippets were generated with ChatGPT assistance (most particularly in JavaScript).
+
+### Call List
+<img src="images/IMG_callList.png" alt="Call List" width="400">
+
+### Patient History
+<img src="images/IMG_history.png" alt="Patient History" width="400">
+
+
+### Call List
+![Call List](images/IMG_callList.png)
+
+### Patient History
+![Patient History](images/IMG_history.png)
+
+### Patient Info
+![Patient Info](images/IMG_info.png)
+
+### New Patient Registration
+![New Patient Registration](images/IMG_newpatient.png)
+
+### Reception Panel
+![Reception Panel](images/IMG_receptionPanel.png)
+
