@@ -33,19 +33,11 @@ I acknowledge that some of my code snippets were generated with ChatGPT assistan
 
 ## Screenshots
 
-This project’s UI can be seen in the following screenshots:
-
-**Call List:**  
-<img src="images/IMG_callList.png" alt="Call List" width="400">
-
-**Patient History:**  
-<img src="images/IMG_history.png" alt="Patient History" width="400">
-
-**Patient Info:**  
-<img src="images/IMG_info.png" alt="Patient Info" width="400">
+This project’s UI can be seen in the **IMAGES folder** folder. The following are kept for easy reference.
 
 **New Patient Registration:**  
 <img src="images/IMG_newpatient.png" alt="New Patient Page" width="400">
 
-**Reception Panel:**  
-<img src="images/IMG_receptionPanel.png" alt="Reception Panel" width="400">
+**Patient Info:**  
+<img src="images/IMG_info.png" alt="Patient Info" width="400">
+
