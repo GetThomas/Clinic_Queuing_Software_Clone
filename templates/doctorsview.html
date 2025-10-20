@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Doctors and Rooms{% endblock %}
+{% block header_title %}View Doctors and Rooms{% endblock %}
+
+{% block content %}
+<h2>All Doctors</h2>
+
+<div class="table-container">
+    <table class="guests-table">
+        <thead>
+            <tr>
+                <th>Room Number</th>
+                <th>Doctor Name</th>
+                <th>Doctor Status</th>
+                <th>Change Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in dr_room %}
+            <tr>
+                <td>{{ doctor.room_no }}</td>
+                <td>{{ doctor.dr_name }}</td>
+                <td>{{ doctor.dr_status }}</td>
+                <td>
+                    <form action="/update_doctor_status/{{ doctor.room_no }}" method="post">
+                        <select name="new_status">
+                            <option value="free" {% if doctor.dr_status == 'free' %}selected{% endif %}>Free</option>
+                            <option value="live" {% if doctor.dr_status == 'live' %}selected{% endif %}>Live</option>
+                            <option value="unavailable" {% if doctor.dr_status == 'unavailable' %}selected{% endif %}>Unavailable</option>
+                        </select>
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

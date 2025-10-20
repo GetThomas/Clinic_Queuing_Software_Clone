@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Clinic{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='Clinic_Logo.png') }}" alt="Clinic Logo">
+        </div>
+        <h1>{% block header_title %}Clinic{% endblock %}</h1>
+    </header>
+
+    <main class="main">
+        {% block content %} {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/newguest">New Patient Page</a>
+            <a href="/guests">Patients View Page</a>
+            <a href="/common_page">Common Page</a>
+            <a href="/assign_doctor">Receptionist_Page</a>
+            <a href="/doctorsview">Doctors View Page</a>
+            <a href="/history">History</a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

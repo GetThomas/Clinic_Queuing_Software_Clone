@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}Reception Panel{% endblock %}
+{% block header_title %}Reception Panel{% endblock %}
+
+{% block content %}
+<h2>Guests</h2>
+<table class="guests-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Type</th>
+            <th>Called Status</th>
+            <th>Requested Doctor</th>
+            <th>Status</th>
+            <th>Assign Doctor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for guest in guests %}
+        <tr>
+            <td>{{ guest.id }}</td>
+            <td>{{ guest.name }}</td>
+            <td>{{ guest.phone }}</td>
+            <td>{{ guest.type }}</td>
+            <td>{{  guest.called_status  }}</td>
+            <td id="current-dr-{{ guest.id }}">{{ guest.req_dr or "" }}</td>
+            <td>
+                <select onchange="updateGuestStatus({{ guest.id }}, this.value)">
+                    <option value="not called" {% if guest.guest_status == 'not called' %}selected{% endif %}>Not Called</option>
+                    <option value="called" {% if guest.guest_status == 'called' %}selected{% endif %}>Called</option>
+                    <option value="done" {% if guest.guest_status == 'done' %}selected{% endif %}>Done</option>
+                </select>
+            </td>
+            <td>
+                <select onchange="assignDoctor({{ guest.id }}, this.value)">
+                    <option value="">--Select--</option>
+                    {% for dr in doctors %}
+                    <option value="{{ dr.room_no }}">{{ dr.dr_name }} ({{ dr.room_no }})</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+<h2>Doctors</h2>
+<table class="guests-table">
+    <thead>
+        <tr>
+            <th>Room No</th>
+            <th>Doctor Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for dr in doctors %}
+        <tr>
+            <td>{{ dr.room_no }}</td>
+            <td>{{ dr.dr_name }}</td>
+            <td>{{ dr.dr_status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+function assignDoctor(guestId, roomNo) {
+    fetch('/update_req_dr', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({id: guestId, req_dr: roomNo})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success)
+            document.getElementById('current-dr-' + guestId).innerText = roomNo;
+    });
+}
+
+function updateGuestStatus(guestId, status) {
+    fetch('/update_guest_status', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({id: guestId, status: status})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (status === 'done') {
+            alert("Guest marked done and moved to history!");
+        }
+        location.reload(); // refresh after any update
+    });
+}
+
+function updatePatientStatus(patientId, status, doctorId) {
+    fetch(`/update_patient_status/${patientId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: status, doctor_id: doctorId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Refresh table to reflect new doctor and patient status
+            location.reload();
+        } else {
+            alert('Error: ' + data.message);
+        }
+    });
+}
+
+</script>
+{% endblock %}

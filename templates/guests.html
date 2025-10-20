@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Patient Queue{% endblock %}
+{% block header_title %}View Patient Queue{% endblock %}
+
+{% block content %}
+<h2>All Guests</h2>
+
+<div class="table-container">
+    <table class="guests-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Type</th>
+                <th>Created At</th>
+                <th>RequiredDoctor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for guest in guests %}
+            <tr>
+                <td>{{ guest.id }}</td>
+                <td>{{ guest.name }}</td>
+                <td>{{ guest.phone }}</td>
+                <td>{{ guest.type }}</td>
+                <td>{{ guest.created_at }}</td>
+                <td>{{  guest.req_dr  }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2>New Patient</h2>
+    <form method="post" class="guest-form">
+        <label>Name
+            <input name="name" required>
+        </label>
+        <label>Phone
+            <input name="phone" required>
+        </label>
+        <label>Type
+            <select name="type">
+                <option value="W">Walk-in</option>
+                <option value="A">Appointment</option>
+            </select>
+        </label>
+        <button class="btn" type="submit">Get token</button>
+    </form>
+</div>
+
+<style>
+.form-container {
+    max-width: 400px;
+    margin: 50px auto; /* centers the box vertically and horizontally */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: #fff;
+    text-align: center;
+}
+
+.guest-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.guest-form input,
+.guest-form select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.guest-form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.guest-form .btn:hover {
+    background-color: #0056b3;
+}
+</style>
+{% endblock %}
