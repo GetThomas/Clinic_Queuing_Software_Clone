@@ -10,7 +10,7 @@ app = Flask(__name__)
 db_config = {
     "host": "localhost",
     "user": "root",
-    "password": "password",
+    "password": "password", #my password is masked
     "database": "clinic"
 }
 
