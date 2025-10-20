@@ -33,6 +33,10 @@ This project was built using the following technologies:
 You are welcome to view and learn from it, but **do not copy, modify, or redistribute** without permission.
 I acknowledge that some of my code snippets were generated with ChatGPT assistance (most particularly in JavaScript).
 
+
+##Images
+
+
 ### Call List
 <img src="images/IMG_callList.png" alt="Call List" width="400">
 
@@ -40,18 +44,12 @@ I acknowledge that some of my code snippets were generated with ChatGPT assistan
 <img src="images/IMG_history.png" alt="Patient History" width="400">
 
 
-### Call List
-![Call List](images/IMG_callList.png)
-
-### Patient History
-![Patient History](images/IMG_history.png)
-
 ### Patient Info
-![Patient Info](images/IMG_info.png)
+<img src="images/IMG_info.png" alt="Info" width="400">
 
 ### New Patient Registration
-![New Patient Registration](images/IMG_newpatient.png)
+<img src="images/IMG_newpatient.png" alt="New Patient Page" width="400">
 
 ### Reception Panel
-![Reception Panel](images/IMG_receptionPanel.png)
+<img src="images/IMG_receptionPanel.png" alt="Reception Panel" width="400">
 
