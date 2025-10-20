@@ -10,46 +10,42 @@ The project entails the following:
 - allows the receptionist to call patients to the required room through the common_page webpage displayed in the waiting room TV
 - allows you to save the details of patients who have already seen the doctor to history
 
-
 ## Tech Stack
 
 This project was built using the following technologies:
 
-**Frontend:** HTML5, CSS3, JavaScript 
+**Frontend:** HTML5, CSS3, JavaScript  
 
-**Backend:** Python 3.x and Flask web framework
+**Backend:** Python 3.x and Flask web framework  
 
-**Database:** MySQL
+**Database:** MySQL  
 
 **Deployment & Tools:** Git & GitHub for version control  
 
 **Libraries & Utilities:**  
 - datetime (Python standard library)  
 - itertools (Python standard library)  
-- mysql-connector-python
-
+- mysql-connector-python  
 
 **Note:** This project is for portfolio/demo purposes only.  
-You are welcome to view and learn from it, but **do not copy, modify, or redistribute** without permission.
+You are welcome to view and learn from it, but **do not copy, modify, or redistribute** without permission.  
 I acknowledge that some of my code snippets were generated with ChatGPT assistance (most particularly in JavaScript).
 
+## Screenshots
 
-##Images
+This project’s UI can be seen in the following screenshots:
 
-
-### Call List
+**Call List:**  
 <img src="images/IMG_callList.png" alt="Call List" width="400">
 
-### Patient History
+**Patient History:**  
 <img src="images/IMG_history.png" alt="Patient History" width="400">
 
+**Patient Info:**  
+<img src="images/IMG_info.png" alt="Patient Info" width="400">
 
-### Patient Info
-<img src="images/IMG_info.png" alt="Info" width="400">
-
-### New Patient Registration
+**New Patient Registration:**  
 <img src="images/IMG_newpatient.png" alt="New Patient Page" width="400">
 
-### Reception Panel
+**Reception Panel:**  
 <img src="images/IMG_receptionPanel.png" alt="Reception Panel" width="400">
-
